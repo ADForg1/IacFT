@@ -318,7 +318,7 @@ jobs:
           echo "- Smoke Tests: ${{ github.event.inputs.skip_smoke_tests == 'true' && 'Skipped' || 'Passed' }}" >> $GITHUB_STEP_SUMMARY
           echo "- Deployment Time: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "[View in Azure Portal](https://portal.azure.com/#@/resource/subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID_TISIP }}/resourceGroups/${{ env.RESOURCE_GROUP_NAME }})" >> $GITHUB_STEP_SUMMARY
+          echo "[View in Azure Portal](https://portal.azure.com/#@/resource/subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/resourceGroups/${{ env.RESOURCE_GROUP_NAME }})" >> $GITHUB_STEP_SUMMARY
 
   post-deployment-validation:
     name: 🔬 Extended Validation
